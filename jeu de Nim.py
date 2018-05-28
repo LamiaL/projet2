@@ -10,11 +10,7 @@ joueur1=user_input
 user_input = input('le nom du deuxième joueure : ')
 joueur2=user_input#demande du l'utilisateur les des joueures
 import pickle
-infile= open ("pickle.txt","rb")
-new_liste=pickle.load (infile)
-print ('la liste des joueurs et leurs score :')
-print (new_liste)
-infile.close()#afficher la liste des joueure déja jouent et leus scores
+
 
 #lancement du jeu
 def etat_du_jeu(nombretas,pierre):    #fonction pour afficher l'état du jeu
@@ -98,5 +94,11 @@ print (scores)
 outfile = open("pickle.txt","wb")
 pickle.dump(scores,outfile)
 outfile.close() #pour enregistre le nom du joueure qui gagne et son score
+
+infile= open ("pickle.txt","rb")
+new_liste=pickle.load (infile)
+print ('la liste des joueurs et leurs score :')
+print (new_liste)
+infile.close()#afficher la liste des joueure déja jouent et leus scores
 #fin du jeu
 
